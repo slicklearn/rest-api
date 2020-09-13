@@ -1,0 +1,4 @@
+{
+    "token_secret_word": "secret_keyword_please_keep_its_private",
+    "database_uri": "mongodb://localhost/slicklearn"
+}
