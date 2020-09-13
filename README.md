@@ -3,7 +3,7 @@ Modulo de API para el proyecto [SlickLearn](https://github.com/slicklearn/slickl
 Todas las operaciones del backend se realizan aquí.
 
 ## Index
-- [EndPoints](#endpoints)
+- [Endpoints](#endpoints)
   - [Register](#register-endpoint)
   - [Login](#login-endpoint)
   - [Check Session](#checksession-endpoint)
