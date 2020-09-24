@@ -23,6 +23,41 @@ const schema = new Schema({
         type: String,
         required: true
     },
+    
+    bio: {
+        type: String,
+        default: ""
+    },
+
+    followers: [{
+        ref: "User",
+        type: Schema.Types.ObjectId
+    }],
+
+    following: [{
+        ref: "User",
+        type: Schema.Types.ObjectId
+    }],
+
+    courses: [{
+        ref: "Course",
+        type: Schema.Types.ObjectId
+    }],
+
+    comments: [{
+        ref: "Comment",
+        type: Schema.Types.ObjectId
+    }],
+
+    location: {
+        type: String,
+        default: "Ubicación desconocida"
+    },
+
+    avatar: {
+        type: String,
+        default: "1"
+    },
 
     roles: [{
         ref: "Role",

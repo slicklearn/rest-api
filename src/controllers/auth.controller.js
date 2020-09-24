@@ -27,11 +27,16 @@ export const register = async (req, res) => {
         return res.status(400).json({success: false, error: "EMAIL_ALREADY_USED"});
     }
 
+    // Set random avatar
+    let randomNum = Math.random() * (50 - 1) + 1;
+    let avatar = (Math.floor(randomNum)) + "";
+
     let user = new User({
         username,
         email,
         displayName,
         roles: [defaultRole._id],
+        avatar,
         password: await User.encryptPassword(password)
     });
 

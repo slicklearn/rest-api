@@ -1,4 +1,30 @@
 {
-    "token_secret_word": "secret_keyword_please_keep_its_private",
-    "database_uri": "mongodb://localhost/slicklearn"
+    "database_uri": "mongodb://localhost/slicklearn",
+
+    "session": {
+        "secret": "set here a secret passphrase :D",
+        "resave": true,
+        "saveUninitialized": true,
+        "cookie": {
+            "domain": "slicklearn.xyz",
+            "maxAge": 604800
+        }
+    },
+
+    "content_length_validator": {
+        "max": 10000,
+        "status": 401,
+        "message": "Too big payload receive. You has been flagged by our DDoS protection"
+    },
+
+    "cors": {
+        "credentials": true,
+        "origin": ["https://slicklearn.xyz"]
+    },
+
+    "ratelimit": {
+        "windowMs": 900000,
+        "max": 100,
+        "message": "Too many requests. You has been flagged by our DDoS protection"
+    }
 }
